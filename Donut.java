@@ -58,7 +58,8 @@ public class Donut extends JPanel {
                 // Lighting calculation for shading
                 double dotProduct = lightX * x + lightY * y + lightZ * z;
                 double magnitude = Math.sqrt(x * x + y * y + z * z);
-                double lightIntensity = Math.max(0, dotProduct / (magnitude * Math.sqrt(lightX * lightX + lightY * lightY + lightZ * lightZ)));
+                double lightIntensity = Math.max(0,
+                        dotProduct / (magnitude * Math.sqrt(lightX * lightX + lightY * lightY + lightZ * lightZ)));
 
                 // Convert 3D to 2D
                 int screenX = (int) (centerX + x);
@@ -99,4 +100,3 @@ public class Donut extends JPanel {
         }
     }
 }
-
